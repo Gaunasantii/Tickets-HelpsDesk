@@ -16,7 +16,7 @@ Aplicación de tipo Helpdesk con sistema de tickets agrupados por categoría y/o
 
 ### Modelo
 
-<img width="887" height="788" alt="Modelo_usuario_rol drawio" src="https://github.com/user-attachments/assets/2d1e1327-0883-4f7f-afdd-15a55e595b79" />
+<img width="901" height="889" alt="Modelo_usuario_rol" src="https://github.com/user-attachments/assets/46955b07-e6a0-4060-8428-c4c5035f5090" />
 
 ## Alcance Funcional 
 
@@ -25,8 +25,8 @@ Aplicación de tipo Helpdesk con sistema de tickets agrupados por categoría y/o
 #### Regularidad:
 |Req|Detalle|
 |:-|:-|
-|CRUD simple|1. CRUD Categoria Ticket<br>2. CRUD Prioridad Ticket<br>3. CRUD Oficina<br>4.CRUD Tecnico|
-|CRUD dependiente|1. CRUD USUARIO {depende de} CRUD Oficina<br>2. CRUD Ticket  {depende de} CRUD Usuario, CRUD Ticket Categoria y CRUD Ticket Prioridad|
+|CRUD simple|1. CRUD Categoria Ticket<br>2. CRUD Prioridad Ticket<br>3. CRUD Empresa<br>4.CRUD Persona <br> 5. CRUD Estado <br> 6. CRUD Tecnico|
+|CRUD dependiente|1. CRUD USUARIO {depende de} CRUD Oficina<br>2. CRUD OFICINA  {depende de} CRUD Empresa|
 |Listado<br>+<br>detalle| 1. Listado de tickets filtrado por categoria, muestra nroTicket, Prioridad,DniUsuario , estado y Descripccion => detalle CRUD Ticket<br> 2. Listado de tickets Filtrado por estado, muestra nroTicket, Prioridad,DniUsuario y Descripccion => detalle muestra datos completos del ticket y el usuario que lo creo|
 |CUU/Epic|1. Realizar el alta de un ticket<br>2. Registrar la solucion de un ticket <br> 3. Cancelación de ticket|
 
@@ -36,7 +36,7 @@ Aplicación de tipo Helpdesk con sistema de tickets agrupados por categoría y/o
 |Req|Detalle|
 |:-|:-|
 |CRUD |1. CRUD Categoria Ticket<br>2. CRUD Prioridad Ticket<br>3. CRUD Usuario<br>4. CRUD Tecnico<br>5. CRUD Ticket<br>6. CRUD Oficina|
-|CUU/Epic|1. Realizar el alta de un ticket<br>2. Registrar la solucion de un ticket <br> 3. Abrir chat para un ticket entre el tecnico y el usuario|
+|CUU/Epic|1. Realizar el alta de un ticket<br>2. Registrar la solucion/Cancelacion de un ticket <br> 3. Abrir chat para un ticket entre el tecnico y el usuario <br> 4. Envio de notificaciones via telefono a tecnicos cuando un ticket asignado se encuentre proximo a su fecha limite|
 
 
 ### Alcance Adicional Voluntario
@@ -44,5 +44,3 @@ Aplicación de tipo Helpdesk con sistema de tickets agrupados por categoría y/o
 |Req|Detalle|
 |:-|:-|
 |Listados |1. Ticket filtrado por Usuario,muestra nroTicket, Prioridad,  estado y Descripccion <br> 2. Ticket filtrado por Prioridad,muestra nroTicket, DniUsuario, estado y Descripccion|
-|CUU/Epic||
-|Otros|1. Envio de notificaciones via telefono a tecnicos cuando un ticket asignado se encuentre proximo a su fecha limite
